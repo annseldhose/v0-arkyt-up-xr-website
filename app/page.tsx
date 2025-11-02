@@ -5,6 +5,7 @@ import About from "@/components/about"
 import Services from "@/components/services"
 import Industries from "@/components/industries"
 import WhyChooseUs from "@/components/why-choose-us"
+import PortfolioVideos from "@/components/portfolio-videos"
 import Portfolio from "@/components/portfolio"
 import Footer from "@/components/footer"
 
