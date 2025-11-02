@@ -29,11 +29,11 @@ export default function Industries() {
   const { ref, inView } = useInView({ threshold: 0.2, triggerOnce: true })
 
   return (
-    <section id="industries" ref={ref} className="section-padding bg-[#0B0C10]">
+    <section id="industries" ref={ref} className="section-padding bg-white">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
           <h2 className="heading-2xl mb-4">Industries We Serve</h2>
-          <p className="text-[#C5C6C7] text-lg max-w-2xl mx-auto">
+          <p className="text-[#6B7280] text-lg max-w-2xl mx-auto">
             Transforming businesses across multiple sectors with immersive technologies.
           </p>
         </div>
@@ -42,15 +42,15 @@ export default function Industries() {
           {industries.map((industry, index) => (
             <div
               key={index}
-              className={`bg-gradient-to-br from-[#1F2833]/50 to-[#66FCF1]/5 border border-[#66FCF1]/20 rounded-lg p-6 hover:from-[#1F2833]/80 hover:to-[#66FCF1]/10 hover:border-[#66FCF1]/40 transition-all duration-300 transform text-center group cursor-pointer ${
+              className={`bg-gradient-to-br from-[#F3F4F6]/50 to-[#0EA5E9]/5 border border-[#0EA5E9]/20 rounded-lg p-6 hover:from-[#F3F4F6]/80 hover:to-[#0EA5E9]/10 hover:border-[#0EA5E9]/40 transition-all duration-300 transform text-center group cursor-pointer ${
                 inView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
               }`}
               style={{ transitionDelay: `${index * 80}ms` }}
             >
-              <h3 className="font-semibold text-white mb-2 group-hover:text-[#66FCF1] transition-colors">
+              <h3 className="font-semibold text-[#1F2937] mb-2 group-hover:text-[#0EA5E9] transition-colors">
                 {industry.name}
               </h3>
-              <p className="text-sm text-[#C5C6C7]">{industry.description}</p>
+              <p className="text-sm text-[#6B7280]">{industry.description}</p>
             </div>
           ))}
         </div>

@@ -14,7 +14,7 @@ export default function WhyChooseUs() {
   const { ref, inView } = useInView({ threshold: 0.2, triggerOnce: true })
 
   return (
-    <section ref={ref} className="section-padding bg-gradient-to-b from-[#1F2833]/50 to-[#0B0C10]">
+    <section ref={ref} className="section-padding bg-gradient-to-b from-[#F3F4F6]/50 to-white">
       <div className="max-w-7xl mx-auto">
         <div className="grid md:grid-cols-2 gap-12 items-center">
           {/* Image */}
@@ -26,7 +26,7 @@ export default function WhyChooseUs() {
             <img
               src="/xr-vr-technology-development.jpg"
               alt="Our Advantages"
-              className="rounded-lg border border-[#66FCF1]/30 hover:border-[#66FCF1]/60 transition-colors"
+              className="rounded-lg border border-[#0EA5E9]/30 hover:border-[#0EA5E9]/60 transition-colors"
             />
           </div>
 
@@ -41,8 +41,8 @@ export default function WhyChooseUs() {
             <div className="space-y-4">
               {advantages.map((advantage, index) => (
                 <div key={index} className="flex gap-4">
-                  <Check className="w-6 h-6 text-[#66FCF1] flex-shrink-0 mt-1" />
-                  <p className="text-[#C5C6C7] text-lg">{advantage}</p>
+                  <Check className="w-6 h-6 text-[#0EA5E9] flex-shrink-0 mt-1" />
+                  <p className="text-[#6B7280] text-lg">{advantage}</p>
                 </div>
               ))}
             </div>

@@ -40,11 +40,11 @@ export default function Services() {
   const { ref, inView } = useInView({ threshold: 0.2, triggerOnce: true })
 
   return (
-    <section id="services" ref={ref} className="section-padding bg-gradient-to-b from-[#0B0C10] to-[#1F2833]/30">
+    <section id="services" ref={ref} className="section-padding bg-gradient-to-b from-white to-[#F3F4F6]/30">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
           <h2 className="heading-2xl mb-4">What We Offer</h2>
-          <p className="text-[#C5C6C7] text-lg max-w-2xl mx-auto">
+          <p className="text-[#6B7280] text-lg max-w-2xl mx-auto">
             Comprehensive XR solutions designed to transform how your business engages with customers and stakeholders.
           </p>
         </div>
@@ -55,14 +55,14 @@ export default function Services() {
             return (
               <div
                 key={index}
-                className={`bg-[#1F2833]/40 border border-[#66FCF1]/20 rounded-lg p-8 hover:border-[#66FCF1]/60 hover:bg-[#1F2833]/60 transition-all duration-300 transform ${
+                className={`bg-[#F3F4F6]/40 border border-[#0EA5E9]/20 rounded-lg p-8 hover:border-[#0EA5E9]/60 hover:bg-[#F3F4F6]/60 transition-all duration-300 transform ${
                   inView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
                 }`}
                 style={{ transitionDelay: `${index * 100}ms` }}
               >
-                <Icon className="w-12 h-12 text-[#66FCF1] mb-4" />
-                <h3 className="heading-xl mb-2 text-white">{service.title}</h3>
-                <p className="text-[#C5C6C7]">{service.description}</p>
+                <Icon className="w-12 h-12 text-[#0EA5E9] mb-4" />
+                <h3 className="heading-xl mb-2 text-[#1F2937]">{service.title}</h3>
+                <p className="text-[#6B7280]">{service.description}</p>
               </div>
             )
           })}

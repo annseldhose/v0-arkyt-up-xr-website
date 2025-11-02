@@ -4,11 +4,11 @@
 @custom-variant dark (&:is(.dark *));
 
 :root {
-  /* ArkytUP custom color palette */
-  --color-bg-dark: #0b0c10;
-  --color-bg-grey: #1f2833;
-  --color-accent-cyan: #66fcf1;
-  --color-text-light: #c5c6c7;
+  --color-bg-dark: #ffffff;
+  --color-bg-grey: #f3f4f6;
+  --color-accent-cyan: #0ea5e9;
+  --color-text-light: #374151;
+  --color-heading: #1f2937;
 
   --background: oklch(1 0 0);
   --foreground: oklch(0.145 0 0);
@@ -16,19 +16,19 @@
   --card-foreground: oklch(0.145 0 0);
   --popover: oklch(1 0 0);
   --popover-foreground: oklch(0.145 0 0);
-  --primary: #0b0c10;
-  --primary-foreground: #66fcf1;
-  --secondary: #1f2833;
-  --secondary-foreground: #c5c6c7;
-  --muted: #1f2833;
-  --muted-foreground: #c5c6c7;
-  --accent: #66fcf1;
-  --accent-foreground: #0b0c10;
+  --primary: #ffffff;
+  --primary-foreground: #0ea5e9;
+  --secondary: #f3f4f6;
+  --secondary-foreground: #374151;
+  --muted: #f3f4f6;
+  --muted-foreground: #374151;
+  --accent: #0ea5e9;
+  --accent-foreground: #ffffff;
   --destructive: oklch(0.577 0.245 27.325);
   --destructive-foreground: oklch(0.577 0.245 27.325);
-  --border: #1f2833;
-  --input: #1f2833;
-  --ring: #66fcf1;
+  --border: #e5e7eb;
+  --input: #f3f4f6;
+  --ring: #0ea5e9;
   --chart-1: oklch(0.646 0.222 41.116);
   --chart-2: oklch(0.6 0.118 184.704);
   --chart-3: oklch(0.398 0.07 227.392);
@@ -138,11 +138,32 @@
   }
 
   .heading-2xl {
-    @apply text-4xl md:text-5xl font-bold text-white text-balance;
+    font-size: 2.25rem;
+    line-height: 2.5rem;
+    font-weight: 700;
+    color: var(--color-heading);
+    text-wrap: balance;
+  }
+
+  @media (min-width: 768px) {
+    .heading-2xl {
+      font-size: 3rem;
+      line-height: 3.5rem;
+    }
   }
 
   .heading-xl {
-    @apply text-2xl md:text-3xl font-bold text-white;
+    font-size: 1.5rem;
+    line-height: 2rem;
+    font-weight: 700;
+    color: var(--color-heading);
+  }
+
+  @media (min-width: 768px) {
+    .heading-xl {
+      font-size: 1.875rem;
+      line-height: 2.25rem;
+    }
   }
 
   .text-accent {

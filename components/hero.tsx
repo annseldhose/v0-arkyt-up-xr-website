@@ -17,7 +17,7 @@ export default function Hero() {
           className="absolute inset-0"
           style={{
             backgroundImage:
-              "linear-gradient(to right, #66FCF1 1px, transparent 1px), linear-gradient(to bottom, #66FCF1 1px, transparent 1px)",
+              "linear-gradient(to right, #0EA5E9 1px, transparent 1px), linear-gradient(to bottom, #0EA5E9 1px, transparent 1px)",
             backgroundSize: "50px 50px",
             animation: "drift 20s linear infinite",
           }}
@@ -32,10 +32,10 @@ export default function Hero() {
           }`}
         >
           <h1 className="heading-2xl mb-6 leading-tight">
-            Innovative <span className="text-[#66FCF1]">XR Solutions</span> for Real Estate and Emerging Industries
+            Innovative <span className="text-[#0EA5E9]">XR Solutions</span> for Real Estate and Emerging Industries
           </h1>
 
-          <p className="text-lg text-[#C5C6C7] mb-8 max-w-2xl leading-relaxed">
+          <p className="text-lg text-[#6B7280] mb-8 max-w-2xl leading-relaxed">
             ArkytUP transforms ideas into immersive 3D, VR, and AR experiences — helping businesses visualize, engage,
             and grow in the digital frontier.
           </p>
@@ -68,13 +68,13 @@ export default function Hero() {
             isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
           }`}
         >
-          <div className="relative h-96 bg-gradient-to-b from-[#66FCF1]/10 to-transparent rounded-lg border border-[#66FCF1]/20 flex items-center justify-center overflow-hidden group">
+          <div className="relative h-96 bg-gradient-to-b from-[#0EA5E9]/10 to-transparent rounded-lg border border-[#0EA5E9]/20 flex items-center justify-center overflow-hidden group">
             <img
               src="/3d-apartment-visualization-xr.jpg"
               alt="XR Visualization Preview"
               className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-[#0B0C10] via-transparent to-transparent"></div>
+            <div className="absolute inset-0 bg-gradient-to-t from-white via-transparent to-transparent"></div>
           </div>
         </div>
       </div>
