@@ -1,7 +1,7 @@
 "use client"
 
 import { useState } from "react"
-import { Mail, MapPin, Linkedin, Instagram } from "lucide-react"
+import { Mail, MapPin, Linkedin, Instagram, Phone } from "lucide-react"
 
 export default function Contact() {
   const [formData, setFormData] = useState({
@@ -41,6 +41,7 @@ export default function Contact() {
             <h3 className="heading-xl text-[#1F2937] mb-6">Contact Information</h3>
 
             <div className="space-y-6">
+              {/* Email */}
               <a
                 href="mailto:arkytup@gmail.com"
                 className="flex gap-4 items-center justify-center group"
@@ -54,6 +55,21 @@ export default function Contact() {
                 </div>
               </a>
 
+              {/* Phone */}
+              <a
+                href="tel:+918078825004"
+                className="flex gap-4 items-center justify-center group"
+              >
+                <Phone className="w-6 h-6 text-[#0EA5E9]" />
+                <div>
+                  <p className="text-sm text-[#6B7280] mb-1">Phone</p>
+                  <p className="text-[#1F2937] group-hover:text-[#0EA5E9] transition-colors">
+                    +91 80788 25004
+                  </p>
+                </div>
+              </a>
+
+              {/* Location */}
               <div className="flex gap-4 items-center justify-center">
                 <MapPin className="w-6 h-6 text-[#0EA5E9]" />
                 <div>
@@ -78,6 +94,8 @@ export default function Contact() {
               </a>
               <a
                 href="https://www.instagram.com/arkytup?igsh=aHAyaTl2ZXU5anRk"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="w-12 h-12 bg-[#F3F4F6] border border-[#0EA5E9]/30 rounded-lg flex items-center justify-center text-[#0EA5E9] hover:border-[#0EA5E9]/60 hover:bg-[#0EA5E9]/10 transition-all"
               >
                 <Instagram size={20} />
@@ -98,3 +116,4 @@ export default function Contact() {
     </section>
   )
 }
+
