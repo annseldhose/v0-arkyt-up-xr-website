@@ -1,36 +1,56 @@
 "use client"
 
 import { useInView } from "react-intersection-observer"
-import { Play } from "lucide-react"
+import { useState, useRef } from "react"
+import { Play, Pause } from "lucide-react"
 
 const portfolioItems = [
   {
     title: "Real Estate Visualization",
     category: "Apartment Showcase",
     description: "Interactive 3D apartment visualization with customization",
+    videoUrl: "/real-estate.mp4",
   },
   {
     title: "VR Interior Design",
     category: "Interior Experience",
     description: "Immersive VR space design and walkthrough experience",
-  },
-  {
-    title: "Product Demo",
-    category: "Interactive Display",
-    description: "3D product visualization with interactive features",
-  },
-  {
-    title: "Digital Twin",
-    category: "Infrastructure",
-    description: "Digital twin of architectural complex with analytics",
+    videoUrl: "/interiors.mp4",
   },
 ]
 
 export default function Portfolio() {
   const { ref, inView } = useInView({ threshold: 0.2, triggerOnce: true })
+  const videoRefs = useRef<HTMLVideoElement[]>([])
+  const [activeIndex, setActiveIndex] = useState<number | null>(null)
+
+  const handlePlayPause = (index: number) => {
+    const video = videoRefs.current[index]
+    if (!video) return
+
+    // Pause all other videos
+    videoRefs.current.forEach((v, i) => {
+      if (v && i !== index) {
+        v.pause()
+      }
+    })
+
+    // Toggle play/pause on the selected video
+    if (video.paused) {
+      video.play()
+      setActiveIndex(index)
+    } else {
+      video.pause()
+      setActiveIndex(null)
+    }
+  }
 
   return (
-    <section id="portfolio" ref={ref} className="section-padding bg-gradient-to-b from-white to-[#F3F4F6]/20">
+    <section
+      id="portfolio"
+      ref={ref}
+      className="section-padding bg-gradient-to-b from-white to-[#F3F4F6]/20"
+    >
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
           <h2 className="heading-2xl mb-4">Our Portfolio</h2>
@@ -48,11 +68,17 @@ export default function Portfolio() {
               }`}
               style={{ transitionDelay: `${index * 100}ms` }}
             >
-              {/* Background Image */}
-              <img
-                src={`/.jpg?height=400&width=500&query=${item.title.replace(/\s+/g, "-").toLowerCase()}-xr`}
-                alt={item.title}
-                className="w-full h-80 object-cover group-hover:scale-110 transition-transform duration-500"
+              {/* Video */}
+              <video
+                ref={(el) => {
+                  if (el) videoRefs.current[index] = el
+                }}
+                src={item.videoUrl}
+                controls={false}
+                muted={false}
+                playsInline
+                preload="metadata"
+                className="w-full h-80 object-cover"
               />
 
               {/* Overlay */}
@@ -64,12 +90,19 @@ export default function Portfolio() {
                 </div>
               </div>
 
-              {/* Play Button */}
-              <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-white/40">
-                <div className="w-16 h-16 rounded-full border-2 border-[#0EA5E9] flex items-center justify-center hover:bg-[#0EA5E9]/20">
-                  <Play className="w-6 h-6 text-[#0EA5E9] fill-[#0EA5E9]" />
+              {/* Play/Pause Button */}
+              <button
+                onClick={() => handlePlayPause(index)}
+                className="absolute inset-0 flex items-center justify-center transition-opacity duration-300 bg-white/30 hover:bg-white/40"
+              >
+                <div className="w-16 h-16 rounded-full border-2 border-[#0EA5E9] flex items-center justify-center bg-white/50">
+                  {activeIndex === index ? (
+                    <Pause className="w-6 h-6 text-[#0EA5E9]" />
+                  ) : (
+                    <Play className="w-6 h-6 text-[#0EA5E9] fill-[#0EA5E9]" />
+                  )}
                 </div>
-              </div>
+              </button>
             </div>
           ))}
         </div>
@@ -78,7 +111,10 @@ export default function Portfolio() {
           <a
             href="#contact"
             className="inline-block px-6 py-3 rounded-lg font-semibold text-center border transition-all hover:opacity-90"
-            style={{ borderColor: "var(--color-accent-cyan)", color: "var(--color-accent-cyan)" }}
+            style={{
+              borderColor: "var(--color-accent-cyan)",
+              color: "var(--color-accent-cyan)",
+            }}
           >
             Request a Demo
           </a>
