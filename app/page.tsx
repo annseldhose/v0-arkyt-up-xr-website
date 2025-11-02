@@ -6,7 +6,6 @@ import Services from "@/components/services"
 import Industries from "@/components/industries"
 import WhyChooseUs from "@/components/why-choose-us"
 import Portfolio from "@/components/portfolio"
-import Contact from "@/components/contact"
 import Footer from "@/components/footer"
 
 export default function Home() {
@@ -19,7 +18,6 @@ export default function Home() {
       <Industries />
       <WhyChooseUs />
       <Portfolio />
-      <Contact />
       <Footer />
     </div>
   )
