@@ -1,93 +1,120 @@
 "use client"
 
-import { useInView } from "react-intersection-observer"
-import { Play } from "lucide-react"
+import { useState } from "react"
+import { Mail, MapPin, Linkedin, Instagram, Phone } from "lucide-react"
 
-const portfolioItems = [
-  {
-    title: "Real Estate Visualization",
-    category: "Apartment Showcase",
-    description: "Interactive 3D apartment visualization with customization",
-    videoUrl: "https://youtu.be/hZfTP558THs?si=7-qOwjOckmrCfwNL",
-  },
-  {
-    title: "VR Interior & Exterior Design",
-    category: "Interior Experience",
-    description: "Immersive VR space design and walkthrough experience",
-    videoUrl: "https://youtu.be/CObvE8oor_A?si=HAwMbrKb22yY1zXg", // 👈 replace with real link
-  },
-]
+export default function Contact() {
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    message: "",
+  })
+  const [submitted, setSubmitted] = useState(false)
 
-export default function Portfolio() {
-  const { ref, inView } = useInView({ threshold: 0.2, triggerOnce: true })
+  const handleChange = (e: any) => {
+    const { name, value } = e.target
+    setFormData((prev) => ({ ...prev, [name]: value }))
+  }
+
+  const handleSubmit = (e: any) => {
+    e.preventDefault()
+    console.log("Form submitted:", formData)
+    setSubmitted(true)
+    setFormData({ name: "", email: "", message: "" })
+    setTimeout(() => setSubmitted(false), 3000)
+  }
 
   return (
-    <section
-      id="portfolio"
-      ref={ref}
-      className="section-padding bg-gradient-to-b from-white to-[#F3F4F6]/20"
-    >
-      <div className="max-w-7xl mx-auto">
-        {/* Section Header */}
-        <div className="text-center mb-16">
-          <h2 className="heading-2xl mb-4">Our Portfolio</h2>
+    <section id="contact" className="section-padding bg-[#F3F4F6]/50">
+      <div className="max-w-4xl mx-auto text-center">
+        {/* Header */}
+        <div className="mb-16">
+          <h2 className="heading-2xl mb-4">Get in Touch</h2>
           <p className="text-[#6B7280] text-lg max-w-2xl mx-auto">
-            Explore our latest projects and immersive experiences across industries.
+            Ready to transform your business with immersive XR solutions? Let's talk.
           </p>
         </div>
 
-        {/* Portfolio Grid */}
-        <div className="grid md:grid-cols-2 gap-12">
-          {portfolioItems.map((item, index) => (
-            <div
-              key={index}
-              className={`group relative rounded-lg overflow-hidden border border-gray-200 hover:border-[#0EA5E9]/60 transition-all duration-300 transform ${
-                inView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
-              }`}
-              style={{ transitionDelay: `${index * 100}ms` }}
-            >
-              {/* Thumbnail / Placeholder */}
-              <div className="relative w-full h-80 bg-gray-100 flex items-center justify-center rounded-lg">
-                {/* Play Button (Clickable Link) */}
-                <a
-                  href={item.videoUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="absolute inset-0 flex items-center justify-center bg-black/10 hover:bg-black/20 transition-all"
-                >
-                  <div className="w-16 h-16 rounded-full border-2 border-[#0EA5E9] flex items-center justify-center bg-white/70 backdrop-blur-sm">
-                    <Play className="w-6 h-6 text-[#0EA5E9] fill-[#0EA5E9]" />
-                  </div>
-                </a>
-              </div>
+        {/* Contact Info - Centered */}
+        <div className="flex flex-col items-center space-y-10">
+          <div>
+            <h3 className="heading-xl text-[#1F2937] mb-6">Contact Information</h3>
 
-              {/* Text Content */}
-              <div className="mt-5 text-center">
-                <div className="text-sm text-[#0EA5E9] font-semibold mb-2">
-                  {item.category}
+            <div className="space-y-6">
+              {/* Email */}
+              <a
+                href="mailto:arkytup@gmail.com"
+                className="flex gap-4 items-center justify-center group"
+              >
+                <Mail className="w-6 h-6 text-[#0EA5E9]" />
+                <div>
+                  <p className="text-sm text-[#6B7280] mb-1">Email</p>
+                  <p className="text-[#1F2937] group-hover:text-[#0EA5E9] transition-colors">
+                    arkytup@gmail.com
+                  </p>
                 </div>
-                <h3 className="text-xl font-bold text-[#1F2937] mb-2">{item.title}</h3>
-                <p className="text-[#6B7280] text-sm">{item.description}</p>
+              </a>
+
+              {/* Phone Number */}
+              <a
+                href="tel:+918078825004"
+                className="flex gap-4 items-center justify-center group"
+              >
+                <Phone className="w-6 h-6 text-[#0EA5E9]" />
+                <div>
+                  <p className="text-sm text-[#6B7280] mb-1">Phone</p>
+                  <p className="text-[#1F2937] group-hover:text-[#0EA5E9] transition-colors">
+                    +91 80788 25004
+                  </p>
+                </div>
+              </a>
+
+              {/* Location */}
+              <div className="flex gap-4 items-center justify-center">
+                <MapPin className="w-6 h-6 text-[#0EA5E9]" />
+                <div>
+                  <p className="text-sm text-[#6B7280] mb-1">Location</p>
+                  <p className="text-[#1F2937]">Kakkanad, Kerala, India</p>
+                </div>
               </div>
             </div>
-          ))}
-        </div>
+          </div>
 
-        {/* Button */}
-        <div className="text-center mt-16">
-          <a
-            href="#contact"
-            className="inline-block px-6 py-3 rounded-lg font-semibold text-center border transition-all hover:opacity-90"
-            style={{
-              borderColor: "var(--color-accent-cyan)",
-              color: "var(--color-accent-cyan)",
-            }}
-          >
-            Request a Demo
-          </a>
+          {/* Social Links */}
+          <div>
+            <h3 className="text-xl font-semibold text-[#1F2937] mb-4">Follow Us</h3>
+            <div className="flex justify-center gap-4">
+              <a
+                href="https://www.linkedin.com/company/arkytup/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-12 h-12 bg-[#F3F4F6] border border-[#0EA5E9]/30 rounded-lg flex items-center justify-center text-[#0EA5E9] hover:border-[#0EA5E9]/60 hover:bg-[#0EA5E9]/10 transition-all"
+              >
+                <Linkedin size={20} />
+              </a>
+              <a
+                href="https://www.instagram.com/arkytup?igsh=aHAyaTl2ZXU5anRk"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-12 h-12 bg-[#F3F4F6] border border-[#0EA5E9]/30 rounded-lg flex items-center justify-center text-[#0EA5E9] hover:border-[#0EA5E9]/60 hover:bg-[#0EA5E9]/10 transition-all"
+              >
+                <Instagram size={20} />
+              </a>
+            </div>
+          </div>
+
+          {/* Description Box */}
+          <div className="bg-gradient-to-br from-[#0EA5E9]/10 to-transparent border border-[#0EA5E9]/30 rounded-lg p-6 max-w-xl text-center">
+            <p className="text-sm text-[#6B7280]">
+              Have a project in mind? Let's create something extraordinary together. Reach out and
+              let's discuss how <span className="font-semibold text-[#0EA5E9]">ArkytUP</span> can
+              bring your vision to life.
+            </p>
+          </div>
         </div>
       </div>
     </section>
   )
 }
+
 
