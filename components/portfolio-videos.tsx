@@ -19,9 +19,9 @@ export default function PortfolioVideos() {
             <iframe
               width="100%"
               height="315"
-              src="https://www.youtube.com/embed/YOUR_REAL_ESTATE_VIDEO_ID"
+              src="https://www.youtube.com/embed/hZfTP558THs?si=S7C43Fem7TMYKxHK"
               title="Real Estate Visualization"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
               allowFullScreen
             ></iframe>
             <div className="p-4 text-left">
@@ -39,9 +39,9 @@ export default function PortfolioVideos() {
             <iframe
               width="100%"
               height="315"
-              src="https://youtu.be/hZfTP558THs?si=Ku4cvQcEzXXdq54G"
+              src="https://www.youtube.com/embed/CObvE8oor_A?si=BNhRNgWZZK9PnGdW"
               title="Interior and Exterior Visualization"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
               allowFullScreen
             ></iframe>
             <div className="p-4 text-left">
@@ -58,3 +58,4 @@ export default function PortfolioVideos() {
     </section>
   )
 }
+
