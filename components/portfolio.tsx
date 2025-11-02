@@ -9,7 +9,7 @@ const portfolioItems = [
     title: "Real Estate Visualization",
     category: "Apartment Showcase",
     description: "Interactive 3D apartment visualization with customization",
-    videoUrl: "/real-estate.mp4",
+    videoUrl: "https://youtu.be/hZfTP558THs?si=VCzJ4G2H7O0MYU5Z",
   },
   {
     title: "VR Interior Design",
