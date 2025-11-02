@@ -30,12 +30,10 @@ export default function Portfolio() {
 
     // Pause all other videos
     videoRefs.current.forEach((v, i) => {
-      if (v && i !== index) {
-        v.pause()
-      }
+      if (v && i !== index) v.pause()
     })
 
-    // Toggle play/pause on the selected video
+    // Toggle play/pause on selected video
     if (video.paused) {
       video.play()
       setActiveIndex(index)
@@ -43,6 +41,10 @@ export default function Portfolio() {
       video.pause()
       setActiveIndex(null)
     }
+  }
+
+  const handleVideoEnded = (index: number) => {
+    if (activeIndex === index) setActiveIndex(null)
   }
 
   return (
@@ -59,55 +61,62 @@ export default function Portfolio() {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-8">
+        <div className="grid md:grid-cols-2 gap-12">
           {portfolioItems.map((item, index) => (
             <div
               key={index}
-              className={`group relative overflow-hidden rounded-lg border border-[#0EA5E9]/20 hover:border-[#0EA5E9]/60 transition-all duration-300 transform ${
+              className={`group relative rounded-lg overflow-hidden border border-gray-200 hover:border-[#0EA5E9]/60 transition-all duration-300 transform ${
                 inView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
               }`}
               style={{ transitionDelay: `${index * 100}ms` }}
             >
-              {/* Video */}
-              <video
-                ref={(el) => {
-                  if (el) videoRefs.current[index] = el
-                }}
-                src={item.videoUrl}
-                controls={false}
-                muted={false}
-                playsInline
-                preload="metadata"
-                className="w-full h-80 object-cover"
-              />
+              {/* Video Container */}
+              <div className="relative w-full overflow-hidden rounded-lg">
+                <video
+                  ref={(el) => {
+                    if (el) videoRefs.current[index] = el
+                  }}
+                  src={item.videoUrl}
+                  onEnded={() => handleVideoEnded(index)}
+                  controls={false}
+                  muted={false}
+                  playsInline
+                  preload="metadata"
+                  className="w-full h-80 object-cover rounded-lg"
+                />
 
-              {/* Overlay */}
-              <div className="absolute inset-0 bg-gradient-to-t from-white via-white/40 to-transparent flex flex-col justify-end p-6">
-                <div className="transform group-hover:translate-y-0 transition-transform duration-300">
-                  <div className="text-sm text-[#0EA5E9] font-semibold mb-2">{item.category}</div>
-                  <h3 className="heading-xl text-[#1F2937] mb-2">{item.title}</h3>
-                  <p className="text-[#6B7280] text-sm mb-4">{item.description}</p>
-                </div>
+                {/* Play/Pause Button */}
+                <button
+                  onClick={() => handlePlayPause(index)}
+                  className={`absolute inset-0 flex items-center justify-center transition-opacity duration-300 ${
+                    activeIndex === index
+                      ? "opacity-0 group-hover:opacity-100"
+                      : "opacity-100"
+                  } bg-transparent hover:bg-black/10`}
+                >
+                  <div className="w-16 h-16 rounded-full border-2 border-[#0EA5E9] flex items-center justify-center bg-white/70 backdrop-blur-sm">
+                    {activeIndex === index ? (
+                      <Pause className="w-6 h-6 text-[#0EA5E9]" />
+                    ) : (
+                      <Play className="w-6 h-6 text-[#0EA5E9] fill-[#0EA5E9]" />
+                    )}
+                  </div>
+                </button>
               </div>
 
-              {/* Play/Pause Button */}
-              <button
-                onClick={() => handlePlayPause(index)}
-                className="absolute inset-0 flex items-center justify-center transition-opacity duration-300 bg-white/30 hover:bg-white/40"
-              >
-                <div className="w-16 h-16 rounded-full border-2 border-[#0EA5E9] flex items-center justify-center bg-white/50">
-                  {activeIndex === index ? (
-                    <Pause className="w-6 h-6 text-[#0EA5E9]" />
-                  ) : (
-                    <Play className="w-6 h-6 text-[#0EA5E9] fill-[#0EA5E9]" />
-                  )}
+              {/* Text Content Below Video */}
+              <div className="mt-5 text-center">
+                <div className="text-sm text-[#0EA5E9] font-semibold mb-2">
+                  {item.category}
                 </div>
-              </button>
+                <h3 className="text-xl font-bold text-[#1F2937] mb-2">{item.title}</h3>
+                <p className="text-[#6B7280] text-sm">{item.description}</p>
+              </div>
             </div>
           ))}
         </div>
 
-        <div className="text-center mt-12">
+        <div className="text-center mt-16">
           <a
             href="#contact"
             className="inline-block px-6 py-3 rounded-lg font-semibold text-center border transition-all hover:opacity-90"
