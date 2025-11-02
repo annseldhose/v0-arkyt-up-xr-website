@@ -35,16 +35,17 @@ export default function Contact() {
           </p>
         </div>
 
-        {/* Contact Info - Centered */}
+        {/* Contact Info - Justified Layout */}
         <div className="flex flex-col items-center space-y-10">
-          <div>
-            <h3 className="heading-xl text-[#1F2937] mb-6">Contact Information</h3>
+          <div className="w-full">
+            <h3 className="heading-xl text-[#1F2937] mb-10">Contact Information</h3>
 
-            <div className="space-y-6">
+            {/* Make the three items appear in a row */}
+            <div className="flex flex-col md:flex-row justify-between items-center gap-8 md:gap-4">
               {/* Email */}
               <a
                 href="mailto:arkytup@gmail.com"
-                className="flex gap-4 items-center justify-center group"
+                className="flex gap-3 items-center justify-center group"
               >
                 <Mail className="w-6 h-6 text-[#0EA5E9]" />
                 <div>
@@ -55,10 +56,10 @@ export default function Contact() {
                 </div>
               </a>
 
-              {/* Phone Number */}
+              {/* Phone */}
               <a
                 href="tel:+918078825004"
-                className="flex gap-4 items-center justify-center group"
+                className="flex gap-3 items-center justify-center group"
               >
                 <Phone className="w-6 h-6 text-[#0EA5E9]" />
                 <div>
@@ -70,7 +71,7 @@ export default function Contact() {
               </a>
 
               {/* Location */}
-              <div className="flex gap-4 items-center justify-center">
+              <div className="flex gap-3 items-center justify-center">
                 <MapPin className="w-6 h-6 text-[#0EA5E9]" />
                 <div>
                   <p className="text-sm text-[#6B7280] mb-1">Location</p>
@@ -116,5 +117,6 @@ export default function Contact() {
     </section>
   )
 }
+
 
 
