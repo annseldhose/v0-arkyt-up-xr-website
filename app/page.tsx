@@ -18,7 +18,7 @@ export default function Home() {
       <Services />
       <Industries />
       <WhyChooseUs />
-      <portfoliovideos />
+      <Portfoliovideos />
       <Portfolio />
       <Footer />
     </div>
