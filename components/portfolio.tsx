@@ -11,7 +11,7 @@ const portfolioItems = [
     videoUrl: "https://youtu.be/hZfTP558THs?si=7-qOwjOckmrCfwNL",
   },
   {
-    title: "VR Interior Design",
+    title: "VR Interior & Exterior Design",
     category: "Interior Experience",
     description: "Immersive VR space design and walkthrough experience",
     videoUrl: "https://youtu.be/CObvE8oor_A?si=HAwMbrKb22yY1zXg", // 👈 replace with real link
