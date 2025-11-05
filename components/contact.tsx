@@ -35,7 +35,7 @@ export default function Contact() {
           </p>
         </div>
 
-        {/* Contact Info - Centered */}
+        {/* Contact Info */}
         <div className="flex flex-col items-center space-y-10">
           <div>
             <h3 className="heading-xl text-[#1F2937] mb-6">Contact Information</h3>
@@ -80,40 +80,39 @@ export default function Contact() {
             </div>
           </div>
 
-  <div className="flex justify-center gap-4 text-[#1A73E8]">
-  <a
-    href="https://www.linkedin.com/company/arkytup/"
-    target="_blank"
-    rel="noopener noreferrer"
-    className="w-12 h-12 bg-[#F3F4F6] border border-[#1A73E8]/30 rounded-lg flex items-center justify-center hover:border-[#1A73E8]/60 hover:bg-[#1A73E8]/10 transition-all"
-  >
-    <Linkedin size={20} />
-  </a>
-  <a
-    href="https://www.instagram.com/arkytup?igsh=aHAyaTl2ZXU5anRk"
-    target="_blank"
-    rel="noopener noreferrer"
-    className="w-12 h-12 bg-[#F3F4F6] border border-[#1A73E8]/30 rounded-lg flex items-center justify-center hover:border-[#1A73E8]/60 hover:bg-[#1A73E8]/10 transition-all"
-  >
-    <Instagram size={20} />
-  </a>
-</div>
+          {/* Social Links */}
+          <div className="flex justify-center gap-4">
+            <a
+              href="https://www.linkedin.com/company/arkytup/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="w-12 h-12 bg-[#F3F4F6] border border-[#1A73E8]/30 rounded-lg flex items-center justify-center hover:border-[#1A73E8]/60 hover:bg-[#1A73E8]/10 transition-all"
+            >
+              <Linkedin size={20} color="#1A73E8" />
+            </a>
+            <a
+              href="https://www.instagram.com/arkytup?igsh=aHAyaTl2ZXU5anRk"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="w-12 h-12 bg-[#F3F4F6] border border-[#1A73E8]/30 rounded-lg flex items-center justify-center hover:border-[#1A73E8]/60 hover:bg-[#1A73E8]/10 transition-all"
+            >
+              <Instagram size={20} color="#1A73E8" />
+            </a>
+          </div>
 
-
-
-
-        {/* Description Box */}
-<div className="bg-gradient-to-br from-[#1A73E8]/10 to-transparent border border-[#1A73E8]/30 rounded-lg p-6 max-w-xl text-center">
-  <p className="text-sm text-[#6B7280]">
-    Have a project in mind? Let's create something extraordinary together. Reach out and
-    let's discuss how <span className="font-semibold !text-[#1A73E8]">ArkytUP</span> can
-    bring your vision to life.
-  </p>
-</div>
-
+          {/* Description Box */}
+          <div className="bg-gradient-to-br from-[#1A73E8]/10 to-transparent border border-[#1A73E8]/30 rounded-lg p-6 max-w-xl text-center">
+            <p className="text-sm text-[#6B7280]">
+              Have a project in mind? Let's create something extraordinary together. Reach out and
+              let's discuss how{" "}
+              <span className="font-semibold" style={{ color: "#1A73E8" }}>
+                ArkytUP
+              </span>{" "}
+              can bring your vision to life.
+            </p>
+          </div>
         </div>
       </div>
     </section>
   )
 }
-
