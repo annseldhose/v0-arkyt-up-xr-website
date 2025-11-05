@@ -26,7 +26,7 @@ export default function About() {
             <img
               src="/kerala-tech-startup-office.jpg"
               alt="ArkytUP Team"
-              className="rounded-lg border border-[#0EA5E9]/30 hover:border-[#0EA5E9]/60 transition-colors"
+              className="rounded-lg border border-[#1A73E8]/30 hover:border-[#1A73E8]/60 transition-colors"
             />
           </div>
 
