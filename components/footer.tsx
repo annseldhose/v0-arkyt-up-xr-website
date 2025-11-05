@@ -9,7 +9,7 @@ export default function Footer() {
         <div className="grid md:grid-cols-4 gap-12 mb-8">
           {/* Brand */}
           <div>
-            <h3 className="text-2xl font-bold text-[#0EA5E9] mb-4">ArkytUP</h3>
+            <h3 className="text-2xl font-bold text-[#1A73E8] mb-4">ArkytUP</h3>
             <p className="text-[#6B7280] text-sm">
               Transforming ideas into immersive XR experiences for emerging industries.
             </p>
