@@ -38,36 +38,36 @@ export default function About() {
           >
             <div className="space-y-8">
               <div>
-                <h3 className="heading-xl text-[#0EA5E9] mb-3">Our Mission</h3>
+                <h3 className="heading-xl text-[#1A73E8] mb-3">Our Mission</h3>
                 <ul className="space-y-2 text-[#6B7280]">
                   <li className="flex gap-3">
-                    <span className="text-[#0EA5E9]">•</span>
+                    <span className="text-[#1A73E8]">•</span>
                     <span>Empower businesses with cutting-edge XR experiences</span>
                   </li>
                   <li className="flex gap-3">
-                    <span className="text-[#0EA5E9]">•</span>
+                    <span className="text-[#1A73E8]">•</span>
                     <span>Transform visualization and customer engagement</span>
                   </li>
                   <li className="flex gap-3">
-                    <span className="text-[#0EA5E9]">•</span>
+                    <span className="text-[#1A73E8]">•</span>
                     <span>Lead innovation in immersive technologies across industries</span>
                   </li>
                 </ul>
               </div>
 
               <div>
-                <h3 className="heading-xl text-[#0EA5E9] mb-3">Our Vision</h3>
+                <h3 className="heading-xl text-[#1A73E8] mb-3">Our Vision</h3>
                 <ul className="space-y-2 text-[#6B7280]">
                   <li className="flex gap-3">
-                    <span className="text-[#0EA5E9]">•</span>
+                    <span className="text-[#1A73E8]">•</span>
                     <span>Make immersive technology accessible to every business</span>
                   </li>
                   <li className="flex gap-3">
-                    <span className="text-[#0EA5E9]">•</span>
+                    <span className="text-[#1A73E8]">•</span>
                     <span>Build scalable solutions for evolving digital needs</span>
                   </li>
                   <li className="flex gap-3">
-                    <span className="text-[#0EA5E9]">•</span>
+                    <span className="text-[#1A73E8]">•</span>
                     <span>Create globally impactful experiences from Kerala</span>
                   </li>
                 </ul>
