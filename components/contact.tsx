@@ -88,7 +88,7 @@ export default function Contact() {
                 href="https://www.linkedin.com/company/arkytup/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-12 h-12 bg-[#F3F4F6] border border-[#1A73E8]/30 rounded-lg flex items-center justify-center text-[#0EA5E9] hover:border-[#0EA5E9]/60 hover:bg-[#0EA5E9]/10 transition-all"
+                className="w-12 h-12 bg-[#F3F4F6] border border-[#1A73E8]/30 rounded-lg flex items-center justify-center text-[#1A73E8] hover:border-[#1A73E8]/60 hover:bg-[#1A73E8]/10 transition-all"
               >
                 <Linkedin size={20} />
               </a>
@@ -96,7 +96,7 @@ export default function Contact() {
                 href="https://www.instagram.com/arkytup?igsh=aHAyaTl2ZXU5anRk"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-12 h-12 bg-[#F3F4F6] border border-[#1A73E8]/30 rounded-lg flex items-center justify-center text-[#0EA5E9] hover:border-[#0EA5E9]/60 hover:bg-[#0EA5E9]/10 transition-all"
+                className="w-12 h-12 bg-[#F3F4F6] border border-[#1A73E8]/30 rounded-lg flex items-center justify-center text-[#1A73E8] hover:border-[#1A73E8]/60 hover:bg-[#1A73E8]/10 transition-all"
               >
                 <Instagram size={20} />
               </a>
