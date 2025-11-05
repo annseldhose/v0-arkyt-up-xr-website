@@ -46,10 +46,10 @@ export default function Contact() {
                 href="mailto:arkytup@gmail.com"
                 className="flex gap-4 items-center justify-center group"
               >
-                <Mail className="w-6 h-6 text-[#0EA5E9]" />
+                <Mail className="w-6 h-6 text-[#1A73E8]" />
                 <div>
                   <p className="text-sm text-[#6B7280] mb-1">Email</p>
-                  <p className="text-[#1F2937] group-hover:text-[#0EA5E9] transition-colors">
+                  <p className="text-[#1F2937] group-hover:text-[#1A73E8] transition-colors">
                     arkytup@gmail.com
                   </p>
                 </div>
@@ -60,10 +60,10 @@ export default function Contact() {
                 href="tel:+918078825004"
                 className="flex gap-4 items-center justify-center group"
               >
-                <Phone className="w-6 h-6 text-[#0EA5E9]" />
+                <Phone className="w-6 h-6 text-[#1A73E8]" />
                 <div>
                   <p className="text-sm text-[#6B7280] mb-1">Phone</p>
-                  <p className="text-[#1F2937] group-hover:text-[#0EA5E9] transition-colors">
+                  <p className="text-[#1F2937] group-hover:text-[#1A73E8] transition-colors">
                     +91 80788 25004
                   </p>
                 </div>
@@ -71,7 +71,7 @@ export default function Contact() {
 
               {/* Location */}
               <div className="flex gap-4 items-center justify-center">
-                <MapPin className="w-6 h-6 text-[#0EA5E9]" />
+                <MapPin className="w-6 h-6 text-[#1A73E8]" />
                 <div>
                   <p className="text-sm text-[#6B7280] mb-1">Location</p>
                   <p className="text-[#1F2937]">Kakkanad, Kerala, India</p>
