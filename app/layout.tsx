@@ -16,6 +16,9 @@ export const metadata: Metadata = {
   description:
     "Innovative XR, VR, and AR solutions for real estate, architecture, and emerging industries. Based in Kerala, India.",
   generator: "v0.app",
+  icons: {
+    icon: "/favicon.png", // 👈 make sure this file is in the 'public' folder
+  },
 }
 
 export default function RootLayout({
