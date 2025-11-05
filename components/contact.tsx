@@ -88,7 +88,7 @@ export default function Contact() {
                 href="https://www.linkedin.com/company/arkytup/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-12 h-12 bg-[#F3F4F6] border border-[#0EA5E9]/30 rounded-lg flex items-center justify-center text-[#0EA5E9] hover:border-[#0EA5E9]/60 hover:bg-[#0EA5E9]/10 transition-all"
+                className="w-12 h-12 bg-[#F3F4F6] border border-[#1A73E8]/30 rounded-lg flex items-center justify-center text-[#0EA5E9] hover:border-[#0EA5E9]/60 hover:bg-[#0EA5E9]/10 transition-all"
               >
                 <Linkedin size={20} />
               </a>
@@ -96,7 +96,7 @@ export default function Contact() {
                 href="https://www.instagram.com/arkytup?igsh=aHAyaTl2ZXU5anRk"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-12 h-12 bg-[#F3F4F6] border border-[#0EA5E9]/30 rounded-lg flex items-center justify-center text-[#0EA5E9] hover:border-[#0EA5E9]/60 hover:bg-[#0EA5E9]/10 transition-all"
+                className="w-12 h-12 bg-[#F3F4F6] border border-[#1A73E8]/30 rounded-lg flex items-center justify-center text-[#0EA5E9] hover:border-[#0EA5E9]/60 hover:bg-[#0EA5E9]/10 transition-all"
               >
                 <Instagram size={20} />
               </a>
@@ -104,7 +104,7 @@ export default function Contact() {
           </div>
 
           {/* Description Box */}
-          <div className="bg-gradient-to-br from-[#0EA5E9]/10 to-transparent border border-[#0EA5E9]/30 rounded-lg p-6 max-w-xl text-center">
+          <div className="bg-gradient-to-br from-[#1A73E8]/10 to-transparent border border-[#1A73E8]/30 rounded-lg p-6 max-w-xl text-center">
             <p className="text-sm text-[#6B7280]">
               Have a project in mind? Let's create something extraordinary together. Reach out and
               let's discuss how <span className="font-semibold text-[#0EA5E9]">ArkytUP</span> can
