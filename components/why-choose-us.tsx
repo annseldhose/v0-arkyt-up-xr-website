@@ -26,7 +26,7 @@ export default function WhyChooseUs() {
             <img
               src="/xr-vr-technology-development.jpg"
               alt="Our Advantages"
-              className="rounded-lg border border-[#0EA5E9]/30 hover:border-[#0EA5E9]/60 transition-colors"
+              className="rounded-lg border border-[#1A73E8]/30 hover:border-[#1A73E8]/60 transition-colors"
             />
           </div>
 
@@ -41,7 +41,7 @@ export default function WhyChooseUs() {
             <div className="space-y-4">
               {advantages.map((advantage, index) => (
                 <div key={index} className="flex gap-4">
-                  <Check className="w-6 h-6 text-[#0EA5E9] flex-shrink-0 mt-1" />
+                  <Check className="w-6 h-6 text-[#1A73E8] flex-shrink-0 mt-1" />
                   <p className="text-[#6B7280] text-lg">{advantage}</p>
                 </div>
               ))}
