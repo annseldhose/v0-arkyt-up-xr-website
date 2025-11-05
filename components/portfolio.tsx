@@ -47,7 +47,7 @@ export default function Contact() {
                 href="mailto:arkytup@gmail.com"
                 className="flex gap-3 items-center justify-center group"
               >
-                <Mail className="w-6 h-6 text-[#0EA5E9]" />
+                <Mail className="w-6 h-6 text-[#1A73E8]" />
                 <div>
                   <p className="text-sm text-[#6B7280] mb-1">Email</p>
                   <p className="text-[#1F2937] group-hover:text-[#0EA5E9] transition-colors">
@@ -61,7 +61,7 @@ export default function Contact() {
                 href="tel:+918078825004"
                 className="flex gap-3 items-center justify-center group"
               >
-                <Phone className="w-6 h-6 text-[#0EA5E9]" />
+                <Phone className="w-6 h-6 text-[#1A73E8]" />
                 <div>
                   <p className="text-sm text-[#6B7280] mb-1">Phone</p>
                   <p className="text-[#1F2937] group-hover:text-[#0EA5E9] transition-colors">
@@ -72,7 +72,7 @@ export default function Contact() {
 
               {/* Location */}
               <div className="flex gap-3 items-center justify-center">
-                <MapPin className="w-6 h-6 text-[#0EA5E9]" />
+                <MapPin className="w-6 h-6 text-[#1A73E8]" />
                 <div>
                   <p className="text-sm text-[#6B7280] mb-1">Location</p>
                   <p className="text-[#1F2937]">Kakkanad, Kerala, India</p>
@@ -89,7 +89,7 @@ export default function Contact() {
                 href="https://www.linkedin.com/company/arkytup/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-12 h-12 bg-[#F3F4F6] border border-[#0EA5E9]/30 rounded-lg flex items-center justify-center text-[#0EA5E9] hover:border-[#0EA5E9]/60 hover:bg-[#0EA5E9]/10 transition-all"
+                className="w-12 h-12 bg-[#F3F4F6] border border-[#1A73E8]/30 rounded-lg flex items-center justify-center text-[#0EA5E9] hover:border-[#0EA5E9]/60 hover:bg-[#0EA5E9]/10 transition-all"
               >
                 <Linkedin size={20} />
               </a>
@@ -97,7 +97,7 @@ export default function Contact() {
                 href="https://www.instagram.com/arkytup?igsh=aHAyaTl2ZXU5anRk"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-12 h-12 bg-[#F3F4F6] border border-[#0EA5E9]/30 rounded-lg flex items-center justify-center text-[#0EA5E9] hover:border-[#0EA5E9]/60 hover:bg-[#0EA5E9]/10 transition-all"
+                className="w-12 h-12 bg-[#F3F4F6] border border-[#1A73E8]/30 rounded-lg flex items-center justify-center text-[#0EA5E9] hover:border-[#0EA5E9]/60 hover:bg-[#0EA5E9]/10 transition-all"
               >
                 <Instagram size={20} />
               </a>
