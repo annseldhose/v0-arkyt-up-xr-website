@@ -42,12 +42,12 @@ export default function Industries() {
           {industries.map((industry, index) => (
             <div
               key={index}
-              className={`bg-gradient-to-br from-[#F3F4F6]/50 to-[#0EA5E9]/5 border border-[#0EA5E9]/20 rounded-lg p-6 hover:from-[#F3F4F6]/80 hover:to-[#0EA5E9]/10 hover:border-[#0EA5E9]/40 transition-all duration-300 transform text-center group cursor-pointer ${
+              className={`bg-gradient-to-br from-[#F3F4F6]/50 to-[#1A73E8]/5 border border-[#1A73E8]/20 rounded-lg p-6 hover:from-[#F3F4F6]/80 hover:to-[#0EA5E9]/10 hover:border-[#0EA5E9]/40 transition-all duration-300 transform text-center group cursor-pointer ${
                 inView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
               }`}
               style={{ transitionDelay: `${index * 80}ms` }}
             >
-              <h3 className="font-semibold text-[#1F2937] mb-2 group-hover:text-[#0EA5E9] transition-colors">
+              <h3 className="font-semibold text-[#1F2937] mb-2 group-hover:text-[#1A73E8] transition-colors">
                 {industry.name}
               </h3>
               <p className="text-sm text-[#6B7280]">{industry.description}</p>
