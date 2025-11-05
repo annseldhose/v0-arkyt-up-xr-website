@@ -107,7 +107,7 @@ export default function Contact() {
           <div className="bg-gradient-to-br from-[#1A73E8]/10 to-transparent border border-[#1A73E8]/30 rounded-lg p-6 max-w-xl text-center">
             <p className="text-sm text-[#6B7280]">
               Have a project in mind? Let's create something extraordinary together. Reach out and
-              let's discuss how <span className="font-semibold text-[#0EA5E9]">ArkytUP</span> can
+              let's discuss how <span className="font-semibold text-[#1A73E8]">ArkytUP</span> can
               bring your vision to life.
             </p>
           </div>
