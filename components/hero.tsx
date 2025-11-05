@@ -32,7 +32,7 @@ export default function Hero() {
           }`}
         >
           <h1 className="heading-2xl mb-6 leading-tight">
-            Innovative <span className="text-[#0EA5E9]">XR Solutions</span> for Real Estate and Emerging Industries
+            Innovative <span className="text-[#1A73E8]">XR Solutions</span> for Real Estate and Emerging Industries
           </h1>
 
           <p className="text-lg text-[#6B7280] mb-8 max-w-2xl leading-relaxed">
