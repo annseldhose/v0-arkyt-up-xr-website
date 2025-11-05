@@ -80,17 +80,17 @@ export default function Contact() {
             </div>
           </div>
 
-         {/* Social Links */}
+        {/* Social Links */}
 <div>
   <h3 className="text-xl font-semibold text-[#1F2937] mb-4">Follow Us</h3>
-  <div className="flex justify-center gap-4 text-[#1A73E8]">
+  <div className="flex justify-center gap-4">
     <a
       href="https://www.linkedin.com/company/arkytup/"
       target="_blank"
       rel="noopener noreferrer"
       className="w-12 h-12 bg-[#F3F4F6] border border-[#1A73E8]/30 rounded-lg flex items-center justify-center hover:border-[#1A73E8]/60 hover:bg-[#1A73E8]/10 transition-all"
     >
-      <Linkedin size={20} />
+      <Linkedin size={20} className="stroke-[#1A73E8]" />
     </a>
     <a
       href="https://www.instagram.com/arkytup?igsh=aHAyaTl2ZXU5anRk"
@@ -98,7 +98,7 @@ export default function Contact() {
       rel="noopener noreferrer"
       className="w-12 h-12 bg-[#F3F4F6] border border-[#1A73E8]/30 rounded-lg flex items-center justify-center hover:border-[#1A73E8]/60 hover:bg-[#1A73E8]/10 transition-all"
     >
-      <Instagram size={20} />
+      <Instagram size={20} className="stroke-[#1A73E8]" />
     </a>
   </div>
 </div>
