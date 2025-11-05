@@ -80,8 +80,7 @@ export default function Contact() {
             </div>
           </div>
 
-        {/* Social Links */}
-<div className="flex justify-center gap-4 text-[#1A73E8]">
+  <div className="flex justify-center gap-4 text-[#1A73E8]">
   <a
     href="https://www.linkedin.com/company/arkytup/"
     target="_blank"
@@ -99,6 +98,7 @@ export default function Contact() {
     <Instagram size={20} />
   </a>
 </div>
+
 
 
 
