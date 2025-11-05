@@ -60,7 +60,7 @@ export default function Services() {
                 }`}
                 style={{ transitionDelay: `${index * 100}ms` }}
               >
-                <Icon className="w-12 h-12 text-[#0EA5E9] mb-4" />
+                <Icon className="w-12 h-12 text-[#1A73E8] mb-4" />
                 <h3 className="heading-xl mb-2 text-[#1F2937]">{service.title}</h3>
                 <p className="text-[#6B7280]">{service.description}</p>
               </div>
