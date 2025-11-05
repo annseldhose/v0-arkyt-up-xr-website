@@ -55,7 +55,7 @@ export default function Services() {
             return (
               <div
                 key={index}
-                className={`bg-[#F3F4F6]/40 border border-[#0EA5E9]/20 rounded-lg p-8 hover:border-[#0EA5E9]/60 hover:bg-[#F3F4F6]/60 transition-all duration-300 transform ${
+                className={`bg-[#F3F4F6]/40 border border-[#1A73E8]/20 rounded-lg p-8 hover:border-[#1A73E8]/60 hover:bg-[#F3F4F6]/60 transition-all duration-300 transform ${
                   inView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
                 }`}
                 style={{ transitionDelay: `${index * 100}ms` }}
